@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#001037"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><title>এম কে স্প্রে পেইন্টিং – ইনভয়েস সিস্টেম</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--tx:#1f2937;--mu:#6b7280;--bd:#d1d5db;--pr:#001037;--in:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111827;--card:#1f2937;--tx:#f3f4f6;--mu:#9ca3af;--bd:#374151;--in:#111827}}
+:root[data-theme="dark"]{--bg:#111827;--card:#1f2937;--tx:#f3f4f6;--mu:#9ca3af;--bd:#374151;--in:#111827}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Hind Siliguri',sans-serif;font-size:16px}
+header{background:var(--pr);color:#fff;padding:14px 16px;text-align:center;font-weight:700;font-size:20px}
+main{max-width:1200px;margin:auto;padding:12px;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:960px){main{grid-template-columns:420px 1fr;align-items:start}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px}
+h2{margin:0 0 10px;font-size:17px}
+label{display:block;font-size:14px;color:var(--mu);margin:8px 0 3px}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--in);color:var(--tx);font:inherit}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.item{display:grid;grid-template-columns:1fr 60px 80px 32px;gap:6px;margin-bottom:6px}
+.item button{padding:0}
+button{font:inherit;border:0;border-radius:8px;padding:10px 14px;cursor:pointer;background:var(--pr);color:#fff;font-weight:600}
+button.g{background:#4b5563}button.o{background:transparent;border:1px dashed var(--pr);color:var(--pr)}
+.acts{display:grid;gap:8px;margin-top:12px}
+#msg{font-size:14px;margin-top:8px;color:var(--mu)}
+.wrap{overflow-x:auto;background:#9ca3af;padding:10px;border-radius:12px}
+#inv{width:794px;min-height:1000px;background:#fff;color:#111;padding:36px 40px;font-family:'Noto Sans Bengali','Hind Siliguri',sans-serif;position:relative}
+#inv .top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #001037;padding-bottom:12px}
+#inv .nm{font-size:30px;font-weight:700;color:#001037;line-height:1.2}#inv .nm small{font-size:inherit;font-weight:inherit}
+#inv .sub{font-size:14px;color:#444;margin-top:4px;line-height:1.8}#inv .ic{display:inline-flex;align-items:center;gap:4px;vertical-align:middle;margin-right:4px}#inv .ic b{font-size:11px;color:#fff;padding:0 6px;border-radius:4px;line-height:17px;font-weight:700;font-family:Arial,sans-serif}#inv .bk{background:#e2136e}#inv .ng{background:#f6921e}
+#inv .tt{font-size:26px;font-weight:700;text-align:right;color:#111}
+#inv .meta{display:flex;justify-content:space-between;margin:18px 0;font-size:15px;gap:20px}
+#inv .meta div{line-height:1.7}
+#inv table{width:100%;border-collapse:collapse;font-size:15px}
+#inv th{background:#001037;color:#fff;padding:8px;text-align:left;font-weight:600}
+#inv td{padding:8px;border-bottom:1px solid #ddd}
+#inv .n{text-align:right}#inv .stamp{position:absolute;right:70px;top:430px;transform:rotate(-15deg);border:5px solid #15803d;color:#15803d;font-size:44px;font-weight:700;padding:2px 22px;border-radius:10px;opacity:.55}
+#inv .tot{margin-left:auto;width:55%;margin-top:14px;font-size:16px}
+#inv .tot div{display:flex;justify-content:space-between;padding:5px 8px}
+#inv .tot .b{background:#e3e6f0;font-weight:700;font-size:18px}
+#inv .sig{display:flex;justify-content:space-between;margin-top:70px;font-size:14px}
+#inv .sig span{border-top:1px solid #333;padding-top:4px;min-width:150px;text-align:center}
+#inv .ft{text-align:center;font-size:13px;color:#555;margin-top:26px}
+</style>
+</head>
+<body>
+<header>🧾 এম কে স্প্রে পেইন্টিং &amp; ডেন্টিং ওয়ার্কস – ইনভয়েস সিস্টেম</header>
+<main>
+<section class="card">
+<h2>তথ্য দিন</h2>
+<div class="r2"><div><label>ইনভয়েস নং</label><input id="no"></div><div><label>তারিখ</label><input id="dt" type="date"></div></div>
+<label>গ্রাহকের নাম</label><input id="cn" placeholder="যেমন: মোঃ রহিম">
+<div class="r2"><div><label>মোবাইল</label><input id="cp" inputmode="tel"></div><div><label>গাড়ির নম্বর</label><input id="vn" placeholder="ঢাকা মেট্রো-গ..."></div></div>
+<label>গাড়ির মডেল</label><input id="vm" placeholder="যেমন: Toyota Axio 2015">
+<label>ঠিকানা</label><input id="ad">
+<h2 style="margin-top:16px">কাজের বিবরণ</h2>
+<div id="items"></div>
+<button class="o" onclick="addItem()" style="width:100%">+ নতুন আইটেম যোগ করুন</button>
+<div class="r2"><div><label>ছাড় (৳)</label><input id="ds" type="number" min="0" value="0"></div><div><label>অগ্রিম/জমা (৳)</label><input id="pd" type="number" min="0" value="0"></div></div>
+<label>পেমেন্ট অবস্থা</label><select id="st"><option value="due">বাকি আছে / আংশিক পরিশোধ</option><option value="paid">✅ পরিশোধ হয়েছে</option></select>
+<div class="acts">
+<button onclick="dl()">⬇️ ইনভয়েস PDF ডাউনলোড করুন</button>
+<button onclick="sh()" style="background:#15803d">📤 শেয়ার করুন (WhatsApp ইত্যাদি)</button>
+<button class="g" onclick="nw()">🆕 নতুন ইনভয়েস</button>
+</div>
+<div id="msg"></div>
+</section>
+<section class="wrap"><div id="inv"></div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+var SIG='data:image/png;base64,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';var items=[{d:'',q:1,p:''}];
+var $=function(i){return document.getElementById(i)};
+function bn(n){return String(n).replace(/\d/g,function(d){return '০১২৩৪৫৬৭৮৯'[d]})}
+function money(n){return bn((Math.round(n*100)/100).toLocaleString('en-US'))}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fdate(v){if(!v)return '';var p=v.split('-');return bn(p[2]+'/'+p[1]+'/'+p[0])}
+function today(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function nextNo(){var n=1;try{n=(parseInt(localStorage.getItem('mkinv'))||0)+1}catch(e){}return n}
+function renderItems(){
+  $('items').innerHTML=items.map(function(it,i){
+    return '<div class="item"><input placeholder="বিবরণ (যেমন: ফুল পেইন্টিং)" value="'+esc(it.d)+'" oninput="upd('+i+',\'d\',this.value)">'+
+    '<input type="number" min="0" placeholder="পরিমাণ" value="'+it.q+'" oninput="upd('+i+',\'q\',this.value)">'+
+    '<input type="number" min="0" placeholder="দাম" value="'+it.p+'" oninput="upd('+i+',\'p\',this.value)">'+
+    '<button class="g" onclick="del('+i+')">✕</button></div>'}).join('');
+}
+function addItem(){items.push({d:'',q:1,p:''});renderItems();draw()}
+function del(i){if(items.length>1){items.splice(i,1);renderItems();draw()}}
+function upd(i,k,v){items[i][k]=v;draw()}
+function draw(){
+  var sub=0,rows='';
+  items.forEach(function(it,i){
+    var t=(parseFloat(it.q)||0)*(parseFloat(it.p)||0);sub+=t;
+    if(it.d||it.p)rows+='<tr><td>'+bn(i+1)+'</td><td>'+esc(it.d)+'</td><td class="n">'+bn(it.q||0)+'</td><td class="n">'+money(parseFloat(it.p)||0)+'</td><td class="n">'+money(t)+'</td></tr>';
+  });
+  var ds=parseFloat($('ds').value)||0,pd=parseFloat($('pd').value)||0,paid=$('st').value==='paid',tot=Math.max(sub-ds,0),due=paid?0:tot-pd;
+  $('inv').innerHTML=
+  (paid?'<div class="stamp">পরিশোধিত</div>':'')+'<div class="top"><div><div class="nm">এম কে স্প্রে পেইন্টিং <small>&amp; ডেন্টিং ওয়ার্কস</small></div><div class="sub">📍 ৫/২ বসু বাজার লেন, নারিন্দা, ঢাকা - ১১০০<br><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#25D366"/><path fill="#fff" d="M12 5.500a6.500 6.500 0 0 0-5.600 9.800L5.500 18.500l3.300-.9A6.500 6.500 0 1 0 12 5.500z"/><path fill="#25D366" d="M9.500 8.800c.2-.4.500-.4.700-.4l.5 1.100-.4.600c.5 1 1.300 1.700 2.300 2.200l.6-.6 1.100.5c0 .3-.2.900-.8 1.100-1.600.4-4.500-2-4-4.500z"/></svg><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0f8ff5"/><path fill="#fff" d="M12 5.500c-3.600 0-6.500 2.400-6.500 5.400 0 1.700.9 3.100 2.400 4.100L7.300 18.500l3.100-1.600c.5.100 1 .1 1.600.1 3.600 0 6.500-2.400 6.500-5.400S15.600 5.500 12 5.500z"/></svg><b class="bk">bKash</b><b class="ng">Nagad</b></span> +৮৮০১৭১০-৪০৭৭০১<br>📞 +৮৮০১৮১৯-১৫৬৪১১<br>✉️ mkspraypaintingdaintingworks@gmail.com</div></div><div class="tt">ইনভয়েস</div></div>'+
+  '<div class="meta"><div><b>গ্রাহক:</b> '+esc($('cn').value)+'<br><b>মোবাইল:</b> '+esc($('cp').value)+'<br><b>ঠিকানা:</b> '+esc($('ad').value)+'</div>'+
+  '<div style="text-align:right"><b>ইনভয়েস নং:</b> '+esc($('no').value)+'<br><b>তারিখ:</b> '+fdate($('dt').value)+'<br><b>গাড়ির নম্বর:</b> '+esc($('vn').value)+'<br><b>মডেল:</b> '+esc($('vm').value)+'</div></div>'+
+  '<table><tr><th style="width:40px">নং</th><th>কাজের বিবরণ</th><th class="n" style="width:70px">পরিমাণ</th><th class="n" style="width:90px">দর (৳)</th><th class="n" style="width:100px">মোট (৳)</th></tr>'+rows+'</table>'+
+  '<div class="tot"><div><span>সাবটোটাল</span><span>৳ '+money(sub)+'</span></div>'+(ds?'<div><span>ছাড়</span><span>- ৳ '+money(ds)+'</span></div>':'')+
+  '<div class="b"><span>সর্বমোট</span><span>৳ '+money(tot)+'</span></div>'+(paid?'<div><span>পরিশোধিত</span><span>৳ '+money(tot)+'</span></div>':(pd?'<div><span>অগ্রিম/জমা</span><span>৳ '+money(pd)+'</span></div>':''))+
+  '<div class="b"><span>বাকি</span><span>৳ '+money(due)+'</span></div></div>'+
+  '<div class="sig"><span>গ্রাহকের স্বাক্ষর</span><span style="position:relative"><img src="'+SIG+'" style="position:absolute;left:50%;transform:translateX(-50%);bottom:100%;height:52px;margin-bottom:-2px">কর্তৃপক্ষের স্বাক্ষর</span></div>'+
+  '<div class="ft">আমাদের সেবা গ্রহণের জন্য আপনাকে ধন্যবাদ।</div><div class="ft" style="margin-top:6px"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M13.500 20v-6.500h2.200l.4-2.700h-2.600V9.100c0-.8.200-1.300 1.300-1.300h1.400V5.400c-.2 0-1.100-.1-2-.1-2.100 0-3.500 1.300-3.500 3.600v1.900H8.500v2.700h2.200V20z"/></svg>facebook.com/MkDilder</span></div>';
+}
+function nw(){
+  try{localStorage.setItem('mkinv',String(parseInt($('no').value)||nextNo()))}catch(e){}
+  items=[{d:'',q:1,p:''}];['cn','cp','vn','vm','ad'].forEach(function(i){$(i).value=''});
+  $('ds').value=0;$('pd').value=0;$('st').value='due';$('no').value=nextNo();$('dt').value=today();renderItems();draw();$('msg').textContent='নতুন ইনভয়েস প্রস্তুত।';
+}
+async function mkpdf(){
+  await document.fonts.ready;
+  var c=await html2canvas($('inv'),{scale:2,backgroundColor:'#fff'});
+  var pdf=new window.jspdf.jsPDF('p','mm','a4');
+  var w=210,h=c.height*w/c.width;
+  if(h>297){var k=297/h;w=w*k;h=297}
+  pdf.addImage(c.toDataURL('image/jpeg',0.95),'JPEG',(210-w)/2,0,w,h);
+  var nm='Invoice-'+($('no').value||'new')+'-'+($('cn').value||'customer').replace(/[^\w\u0980-\u09FF-]+/g,'_')+'.pdf';
+  try{localStorage.setItem('mkinv',String(parseInt($('no').value)||0))}catch(e){}
+  return {blob:pdf.output('blob'),nm:nm};
+}
+async function dl(){
+  var m=$('msg');m.textContent='PDF তৈরি হচ্ছে...';
+  try{
+    var r=await mkpdf(),u=URL.createObjectURL(r.blob),a=document.createElement('a');
+    a.href=u;a.download=r.nm;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(u)},20000);
+    m.textContent='✅ PDF ডাউনলোড হয়েছে (ফোনের Downloads ফোল্ডারে দেখুন)।';
+  }catch(e){m.textContent='সমস্যা হয়েছে: '+((e&&e.message)||e)}
+}
+async function sh(){
+  var m=$('msg');m.textContent='PDF তৈরি হচ্ছে...';
+  try{
+    var r=await mkpdf(),f=new File([r.blob],r.nm,{type:'application/pdf'});
+    if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:r.nm});m.textContent='✅ শেয়ার করা হয়েছে।'}
+    else{m.textContent='এই ফোনে শেয়ার সম্ভব নয়, ডাউনলোড বাটন ব্যবহার করুন।'}
+  }catch(e){m.textContent=(e&&e.name==='AbortError')?'শেয়ার বাতিল করা হয়েছে।':'সমস্যা হয়েছে: '+((e&&e.message)||e)}
+}
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
+document.querySelectorAll('#no,#dt,#cn,#cp,#vn,#vm,#ad,#ds,#pd,#st').forEach(function(e){e.addEventListener('input',draw)});
+$('no').value=nextNo();$('dt').value=today();renderItems();draw();
+if(document.fonts)document.fonts.ready.then(draw);
+</script>
+</body>
+</html>
